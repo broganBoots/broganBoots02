@@ -4,13 +4,14 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const connectDB = require("./config/db");
 const router = require("./routes");
+const FRONTEND_URL = env.process.FRONTEND_URL
 
 const app = express();
 const path = require('path');
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: `${FRONTEND_URL}`,
   credentials: true
 }));
 app.use(express.json());

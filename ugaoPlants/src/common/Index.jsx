@@ -1,6 +1,6 @@
 
 
-const backendDomin = "https://broganboots02.onrender.com"
+const backendDomin = "http://localhost:8081"
 
 const SummaryApi = {
   signUP: {

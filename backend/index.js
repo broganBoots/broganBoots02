@@ -10,7 +10,7 @@ const path = require('path');
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cors({
-  origin: 'https://broganboots02-1.onrender.com',
+  origin: 'http://localhost:5173',
   credentials: true
 }));
 app.use(express.json());

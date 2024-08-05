@@ -1,3 +1,5 @@
+const FRONTEND_URL = process.env.FRONTEND_URL
+
 const paymentStatus = async (req, res) => {
   let salt_key = process.env.SALT_KEY;
   const merchantTransactionId = req.query.id;
@@ -24,10 +26,10 @@ const paymentStatus = async (req, res) => {
     .request(options)
     .then(async (response) => {
       if (response.data.success === true) {
-        const url = `http://localhost:5173/success`;
+        const url = `${FRONTEND_URL}/success`;
         return res.redirect(url);
       } else {
-        const url = `http://localhost:5173/failure`;
+        const url = `${FRONTEND_URL}/failure`;
         return res.redirect(url);
       }
     })

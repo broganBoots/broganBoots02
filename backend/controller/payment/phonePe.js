@@ -1,4 +1,5 @@
 const axios = require("axios");
+const FRONTEND_URL = process.env.FRONTEND_URL
 require("dotenv").config();
 const crypto = require("crypto");
 
@@ -28,7 +29,7 @@ const phonePePayment = async (req, res) => {
       merchantUserId: req.body.MUID,
       amount: req.body.amount * 100,
       name: "anuj",
-      redirectUrl: `http://localhost:8081/api/status/?id=${merchantTransactionId}`,
+      redirectUrl: `${FRONTEND_URL}/api/status/?id=${merchantTransactionId}`,
       redirectMode: "POST",
       callbackUrl: "https://webhook.site/callback-url",
       mobileNumber: "9999999999",

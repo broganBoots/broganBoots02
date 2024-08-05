@@ -106,7 +106,7 @@ function Nav() {
                       aria-current="page"
                       to="/"
                     >
-                      Home
+                      Hometgtg
                     </Link>
                   </li>
                   <li className="nav-item  ">

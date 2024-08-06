@@ -26,7 +26,7 @@ app.get("/test", (req, res)=> {
 
 app.use("/api", router);
 
-const PORT = 8081 || process.env.PORT;
+const PORT = 8087 || process.env.PORT;
 
 connectDB().then(() => {
   app.listen(PORT, () => {

@@ -11,7 +11,7 @@ async function userLogout(req, res) {
      res.json({
       message: "Logged out successfully",
       error: false,
-      success: truefrf,
+      success: true,
       data: [],
     });
   } catch (err) {

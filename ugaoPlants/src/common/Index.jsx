@@ -1,6 +1,6 @@
 
 
-const backendDomin = 'http://localhost:5173'
+const backendDomin = 'https://broganboots02.onrender.com'
 const SummaryApi = {
   signUP: {
     URL: `${backendDomin}/api/signup`,

@@ -1,6 +1,6 @@
 
 
-const backendDomin = process.env.BACKEND_URL
+const backendDomin = 'http://localhost:5173'
 const SummaryApi = {
   signUP: {
     URL: `${backendDomin}/api/signup`,

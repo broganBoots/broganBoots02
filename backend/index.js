@@ -10,7 +10,7 @@ const path = require('path');
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cors({
-  origin: "https://inspiring-paletas-d7daba.netlify.app/",
+  origin: process.env.FRONTEND_URL,
   credentials: true
 }));
 app.use(express.json());
